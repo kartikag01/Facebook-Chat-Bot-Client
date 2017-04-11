@@ -11,7 +11,8 @@
     background: #f2f5f8;
     overflow-y: scroll;
     position: fixed;
-    top: 5px;
+    top: 65px;
+    padding-top: 11px;
     bottom: 45px;
     left: 50%;
     right: 0;

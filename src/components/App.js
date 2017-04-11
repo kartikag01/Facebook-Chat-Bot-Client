@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import TextField from "material-ui/TextField";
 import Send from "material-ui/svg-icons/content/send";
+import AppBar from "material-ui/AppBar";
+import FontIcon from "material-ui/FontIcon";
 import RaisedButton from "material-ui/RaisedButton";
 import {Row, Col} from "../wx-grid-system";
 import Snackbar from "material-ui/Snackbar";
@@ -61,32 +63,39 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Row>
-                    <Col xs={6}>
-                        <TextField
-                            multiLine
-                            rows={5}
-                            fullWidth
-                            onChange={(event, newMessage) => this.setState({newMessage})}
-                            name="json-message"
-                        />
-                        <RaisedButton
-                            primary
-                            icon={<Send />}
-                            label="Send Message"
-                            onTouchTap={() => this.addBotMessage()}
-                        />
-                    </Col>
-                    <Col xs={6}>
-                        <Library userMessageEntered={this.userMessageEntered} messages={this.state.messages}/>
-                    </Col>
-                </Row>
-                <Snackbar
-                    open={this.state.openSnackBar}
-                    message={this.state.snackBarMessage}
-                    autoHideDuration={4000}
-                    onRequestClose={this.handleRequestClose}
+                <AppBar
+                    title="Facebook Bot Messenger Test Client"
+                    iconElementRight={<FontIcon className="github"/>}
                 />
+                <div style={{padding: 20}}>
+                    <Row>
+                        <Col xs={8}>
+                            Message From Bot
+                            <TextField
+                                multiLine
+                                rows={5}
+                                fullWidth
+                                onChange={(event, newMessage) => this.setState({newMessage})}
+                                name="json-message"
+                            />
+                            <RaisedButton
+                                primary
+                                icon={<Send />}
+                                label="Send Message"
+                                onTouchTap={() => this.addBotMessage()}
+                            />
+                        </Col>
+                        <Col xs={4}>
+                            <Library userMessageEntered={this.userMessageEntered} messages={this.state.messages}/>
+                        </Col>
+                    </Row>
+                    <Snackbar
+                        open={this.state.openSnackBar}
+                        message={this.state.snackBarMessage}
+                        autoHideDuration={4000}
+                        onRequestClose={this.handleRequestClose}
+                    />
+                </div>
             </div>
         );
     }
