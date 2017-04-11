@@ -1,0 +1,10 @@
+{
+  "message": {
+    "attachment": {
+      "type": "file",
+      "payload": {
+        "url": "https://petersapparel.com/bin/receipt.pdf"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "message": {
+    "attachment": {
+      "type": "image",
+      "payload": {
+        "url": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTjsfEqNeaDzVutKlcInnUApAmWETbFskvHrPR1W_ssUlaHk-nRdQ"
+      }
+    }
+  }
+}
