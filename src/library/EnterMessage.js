@@ -12,10 +12,10 @@ export default  class EnterMessage extends React.Component {
     onSubmitMessage = () => {
         let {dispatch} = this.props;
         let text       = this.refs.message.value;
-        // if (text && text.length > 0) {
-        //   dispatch(plainTextEntered({ text }));
-        //   this.refs.message.value = "";
-        // }
+        if (text && text.length > 0) {
+            this.props.userMessageEntered(text);
+            this.refs.message.value = "";
+        }
     };
 
     render() {

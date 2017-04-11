@@ -14,11 +14,11 @@ export default class Index extends React.Component {
     }
 
     getChatView = () => {
-        const {messages} = this.props;
+        const {messages , userMessageEntered} = this.props;
         return (
             <div>
                 <MainChat messages={messages} className="main-chat"/>
-                <EnterMessage className="message-bar center55"/>
+                <EnterMessage userMessageEntered={userMessageEntered} className="message-bar center55"/>
             </div>
         )
     };

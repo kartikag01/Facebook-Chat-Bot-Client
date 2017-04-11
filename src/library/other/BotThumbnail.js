@@ -5,7 +5,7 @@ export default  class BotThumbnail extends React.Component {
     render() {
         let {botThumbnailImageUrl} =  this.props;
         return (
-            <img class="botThumbnailImage" src={botThumbnailImageUrl}/>
+            <img className="botThumbnailImage" src={botThumbnailImageUrl}/>
         );
     }
 }

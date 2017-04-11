@@ -37,7 +37,25 @@ class App extends Component {
             this.setState({messages: update(messages, {$push: [messageWithWrapper]})})
         } catch (err) {
             this.setState({openSnackBar: true, snackBarMessage: 'Please Enter Valid JSON'});
+            setTimeout(() => {
+                this.setState({openSnackBar: false});
+            }, 4000);
         }
+    };
+
+    userMessageEntered = (text) => {
+        let {messages}         = this.state;
+        let messageWithWrapper = {
+            body: {
+                type: "user",
+                user: {
+                    message: {
+                        text: text
+                    }
+                }
+            },
+        };
+        this.setState({messages: update(messages, {$push: [messageWithWrapper]})})
     };
 
     render() {
@@ -60,7 +78,7 @@ class App extends Component {
                         />
                     </Col>
                     <Col xs={6}>
-                        <Library messages={this.state.messages}/>
+                        <Library userMessageEntered={this.userMessageEntered} messages={this.state.messages}/>
                     </Col>
                 </Row>
                 <Snackbar
