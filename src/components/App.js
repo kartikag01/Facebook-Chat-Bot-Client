@@ -77,7 +77,7 @@ class App extends Component {
                 < div style={{padding: 20}}>
                     <Row>
                         <Col xs={8}>
-                            Message From Bot
+                            Enter Message From Bot
                             <TextField
                                 multiLine
                                 rows={5}
@@ -92,6 +92,9 @@ class App extends Component {
                                 label="Send Message"
                                 onTouchTap={() => this.addBotMessage()}
                             />
+                            <div style={{paddingTop: 30}}>
+                                React Docs on github for sample json of messages
+                            </div>
                         </Col>
                         <Col xs={4}>
                             <Library userMessageEntered={this.userMessageEntered} messages={this.state.messages}/>

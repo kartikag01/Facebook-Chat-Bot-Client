@@ -1,6 +1,9 @@
 
+## About
+This is a UI Library for Facebook Bot.
+Test your sample json and check its view without setting Webhook
 
-# Supported Send API Reference
+## Supported Send API Reference
 
 ## Content Types
 
@@ -8,7 +11,7 @@
 ```
 {
   "message": {
-    "text": "hello, world!"
+    "text": "hello, Developer!"
   }
 }
 ```
@@ -34,7 +37,7 @@
     "attachment": {
       "type": "image",
       "payload": {
-        "url": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTjsfEqNeaDzVutKlcInnUApAmWETbFskvHrPR1W_ssUlaHk-nRdQ"
+        "url": "http://thiovan.com/wp-content/uploads/2017/01/javascript_banner-660x330.jpg"
       }
     }
   }
