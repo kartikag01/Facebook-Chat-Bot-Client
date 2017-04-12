@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import TextField from "material-ui/TextField";
 import Send from "material-ui/svg-icons/content/send";
 import AppBar from "material-ui/AppBar";
-import FontIcon from "material-ui/FontIcon";
 import RaisedButton from "material-ui/RaisedButton";
 import {Row, Col} from "../wx-grid-system";
 import Snackbar from "material-ui/Snackbar";
@@ -20,7 +19,7 @@ class App extends Component {
                 type: "bot",
                 bot : {
                     message: {
-                        "text": "Hello, Dexterous!"
+                        "text": "Hello, Developer!"
                     }
                 }
             },
@@ -65,15 +64,24 @@ class App extends Component {
             <div>
                 <AppBar
                     title="Facebook Bot Messenger Test Client"
-                    iconElementRight={<FontIcon className="github"/>}
+                    iconElementRight={
+                        <a href="https://github.com/KARTIK01/Facebook-Chat-Bot-Client" target="_blank">
+                            <img style={{
+                                width : 55,
+                                height: 55,
+                                cursor: 'pointer'
+                            }} src="https://storage.googleapis.com/images-dexterous/fb-chat-bot-ui/github_logo.png"/>
+                        </a>
+                    }
                 />
-                <div style={{padding: 20}}>
+                < div style={{padding: 20}}>
                     <Row>
                         <Col xs={8}>
                             Message From Bot
                             <TextField
                                 multiLine
                                 rows={5}
+                                rowsMax={9}
                                 fullWidth
                                 onChange={(event, newMessage) => this.setState({newMessage})}
                                 name="json-message"

@@ -85,7 +85,7 @@
         "elements": [
           {
             "title": "Welcome to Peters Hats",
-            "image_url": "https://petersfancybrownhats.com/company_image.png",
+            "image_url": "http://www.wpwatercooler.com/wp-content/uploads/2013/08/cowboy-coder.png",
             "subtitle": "We ve got the right hat for everyone.",
             "default_action": {
               "type": "web_url",
