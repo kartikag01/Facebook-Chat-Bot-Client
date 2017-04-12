@@ -4,6 +4,7 @@ This is a UI Library for Facebook Bot.
 Test your sample json and check its view without setting Webhook
 
 ## Supported Send API Reference
+Type these sample json on left side message panel
 
 ## Content Types
 
@@ -87,8 +88,32 @@ Test your sample json and check its view without setting Webhook
         "template_type": "generic",
         "elements": [
           {
-            "title": "Welcome to Peters Hats",
+            "title": "Welcome to Dexterous",
             "image_url": "http://www.wpwatercooler.com/wp-content/uploads/2013/08/cowboy-coder.png",
+            "subtitle": "We ve got the right hat for everyone.",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://peterssendreceiveapp.ngrok.io/view?item=103",
+              "messenger_extensions": true,
+              "webview_height_ratio": "tall",
+              "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+            },
+            "buttons": [
+              {
+                "type": "web_url",
+                "url": "http:/dexterousapp.com",
+                "title": "View Website"
+              },
+              {
+                "type": "postback",
+                "title": "Start Chatting",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+              }
+            ]
+          },
+           {
+            "title": "Welcome to Peters Hats",
+            "image_url": "https://talk.openmrs.org/uploads/default/original/2X/e/e5ee1282b1a90eaca3af2f3ecd0a94c84a651c35.jpg",
             "subtitle": "We ve got the right hat for everyone.",
             "default_action": {
               "type": "web_url",
